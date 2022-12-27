@@ -21,16 +21,11 @@ int main()
     {
         v.push_back(s.substr(0, s.find(',')));
         s.erase(0, s.find(',') + 2);
-
     }
 
     int n; // The amount of items you will dig through.
     cin >> n; cin.ignore();
 
-    for (int i = 0; i < v.size(); ++i)
-    {
-        cout << v.at(i) << endl;
-    }
     for (int i = 0; i < n; i++) 
     {
         string item;
