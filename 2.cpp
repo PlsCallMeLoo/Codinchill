@@ -10,20 +10,24 @@ int main()
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 	#endif
-	std::vector<int> v;
-	string ip;
+	
+	string s;
+    getline(cin, s);
 
-    getline(cin, ip);
+    char buffer = '-';
 
-    for(char a : ip)
+    int aa = 0;
+    for(char a : s)
     {
-    	if(isdigit(a))
+    	if(tolower(a) == buffer)
     	{
-    		v.push_back(a - '0');
+    		aa++;
     	}
+
+    	buffer = tolower(a);
     }
 
-    cout << accumulate(v.begin(), v.end(), 0) * v.at(0);
+    cout << aa;
 
 }
 
