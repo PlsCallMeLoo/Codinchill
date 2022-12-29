@@ -1,1 +1,1 @@
-find . -name "*.exe" -type f -delete
+find . -name "*.exe" "*.sh" "*.txt" -type f -delete
