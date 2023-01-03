@@ -10,6 +10,12 @@ int main()
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 	#endif
+
+	 string s;
+    getline(cin, s);
+
+
+    cout << (char)round((int)s[0] / 2);
 }
 
 
