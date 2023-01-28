@@ -11,6 +11,10 @@ int main()
 	freopen("output.txt", "w", stdout);
 	#endif
 
+
+    cout << "as"
+;
+  
 }
 
 
