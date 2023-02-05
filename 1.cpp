@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #define _USE_MATH_DEFINES
 
+#include <cstring>
+
 using namespace std;
 
 
@@ -10,29 +12,28 @@ int main()
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 	#endif
+       string s;
+    getline(cin, s);
 
-    string t;
-    getline(cin, t);
-    string t2;
-    getline(cin, t2);
+    std::vector<char> v;
 
-    for (int i = 0; i < t2.size(); ++i)
+    for(int i = 0;i < s.size();i++ )
     {
-        if(t[i] == '1')
-        {
-            cout << t[i];
-            continue;
-        }
+        s[i] = tolower(s[i]);
+    }
 
-        if(t2[i] == '1')
+
+
+    for(int i = 0;i < s.size();i++ )
+    {
+        if(!(count(v.begin(), v.end(), s[i])))
         {
-            cout << '1';
-        }
-        else
-        {
-            cout << '0';
+            cout << s[i] <<  " " << count(s.begin(), s.end(), s[i]) << endl;
+            v.push_back(s[i]);
         }
     }
+
+
 }
 
 

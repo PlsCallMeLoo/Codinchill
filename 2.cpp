@@ -12,8 +12,7 @@ int main()
 	#endif
 
 
-    cout << "as"
-;
+    cout << "as" ;
   
 }
 
